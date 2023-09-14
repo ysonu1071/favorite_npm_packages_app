@@ -96,7 +96,7 @@ function AddFavorite() {
                 <div className='w-full md:w-[700px] h-[200px] px-3 border-2 border-gray-300 overflow-auto rounded'>
                     {!isEmpty ? !isLoading ? searchedData !== undefined ? <ul>
                         {searchedData.map((data, index) => <li key={index}><input type="radio" name='npm package' onClick={() => handleSelectPackage(data.package.name)} /> <span>{data.package.name}</span></li>)}
-                    </ul> : <p className='w-full text-center mt-[50px] md:leading-[190px] md:mt-0'>Could not fetch data due to internal server error!. Try again after some time.</p> : <img src={loadingImg} alt="loading" className='w-[240px] h-[150px] md:w-[300px] md:h-[195px] m-auto' /> : <p className='w-full text-center leading-[190px]'>Type something in search box to search.</p>}
+                    </ul> : <p className='w-full text-center mt-[50px] md:leading-[190px] md:mt-0'>Could not fetch data due to internal server error!. Try again after some time.</p> : <img src={loadingImg} alt="loading" className='w-[240px] h-[195px] md:w-[300px]  m-auto' /> : <p className='w-full text-center leading-[190px]'>Type something in search box to search.</p>}
                 </div>
                 {!isPackageSelected && <div className='text-red-600 font-bold w-[700px] text-left'>Please select Package Name</div>}
                 <div className='w-full md:w-[700px] h-[180px] mt-4 flex flex-col relative'>
